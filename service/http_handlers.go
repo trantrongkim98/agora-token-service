@@ -155,6 +155,8 @@ func (s *Service) nocache() gin.HandlerFunc {
 		c.Header("Pragma", "no-cache")
 		if s.allowOrigin != "" {
 			c.Header("Access-Control-Allow-Origin", s.allowOrigin)
+			c.Header("Access-Control-Allow-Methods", "DELETE, POST, GET,PUT, OPTIONS")
+			c.Header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
 		}
 	}
 }
