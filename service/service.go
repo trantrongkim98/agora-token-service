@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"fmt"
+	"github.com/gin-contrib/cors"
 	"log"
 	"net/http"
 	"os"
@@ -92,6 +93,10 @@ func NewService() *Service {
 	api := gin.Default()
 
 	api.Use(s.nocache())
+	config := cors.DefaultConfig()
+	config.AllowOrigins = []string{"*"} // Thay thế bằng địa chỉ trang web của bạn
+	config.AllowMethods = []string{"GET", "POST", "OPTIONS", "PUT", "DELETE"}
+	api.Use(cors.New(config))
 	api.GET("rtc/:channelName/:role/:tokenType/:rtcuid/", s.getRtcToken)
 	api.GET("rtm/:rtmuid/", s.getRtmToken)
 	api.GET("rte/:channelName/:role/:tokenType/:rtcuid/", s.getRtcRtmToken)

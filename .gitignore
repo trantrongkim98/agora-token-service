@@ -29,3 +29,4 @@ agora-token-service
 
 # Environment variable
 .env
+.idea

@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/AgoraIO-Community/go-tokenbuilder v1.3.0
 	github.com/gin-gonic/gin v1.9.1
-	github.com/joho/godotenv v1.3.0
+	github.com/joho/godotenv v1.5.1
 )
 
 require (
@@ -13,6 +13,7 @@ require (
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
+	github.com/gin-contrib/cors v1.4.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.4 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
